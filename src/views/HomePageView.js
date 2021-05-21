@@ -11,7 +11,7 @@ class HomePage extends Component {
 
     async componentDidMount() {
         const response = await axios.get(`${requestParams.MAIN_URL}/trending/all/day?api_key=${requestParams.API_KEY}`);
-        
+        console.log(response.data.results)
         this.setState({ films: response.data.results })
     }
 
